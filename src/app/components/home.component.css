@@ -1,0 +1,111 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul li {
+    background: #eeeeee;
+    padding: 2em;
+    border-radius: 4px;
+    margin-bottom: 7px;
+    display: grid;
+    grid-template-columns: 60px auto;
+}
+
+ul li p {
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+ul li img {
+    border-radius: 50%;
+    width: 100%;
+}
+
+.bg-transparent {
+    background-color: transparent;
+}
+
+:host {
+    height: 100%;
+}
+
+.photo {
+    object-fit: contain;
+}
+
+.card {
+    width: 20rem;
+    margin: 0 auto;
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, .125);
+    border-radius: .25rem;
+}
+
+.card-header {
+    padding: .75rem 1.25rem;
+    margin-bottom: 0;
+    background-color: #f7f7f9;
+    border-bottom: 1px solid rgba(0, 0, 0, .125);
+}
+
+.card-header:first-child {
+    border-radius: calc(.25rem - 1px) calc(.25rem - 1px) 0 0;
+}
+
+.h6,
+h6 {
+    font-size: 1rem;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.card-block {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 1.25rem;
+}
+
+.card-img-top {
+    border-radius: 50%;
+    width: 50%;
+    align-self: center;
+}
+
+.cta {
+    background: #7700FF;
+    border: none;
+    color: white;
+    text-transform: uppercase;
+    border-radius: 4px;
+    padding: 1em;
+    cursor: pointer;
+    font-family: "Montserrat";
+}
+
+.div-head {
+    display: inline-block;
+    width: 100%;
+}
+.div-head div{
+    float: left;
+}
+.div-head .add-div{
+    float: right;
+    margin-top: 22px;
+}

@@ -1,0 +1,29 @@
+<h1>Home</h1>
+<div *ngIf="isAuthenticated && currentUser && currentUser.isSocial" class="card text-center">
+    <h6 class="card-header">
+        Social Login
+    </h6>
+    <div class="card-block"></div>
+    <img class="card-img-top img-responsive photo" src="{{ currentUser.photoUrl }}">
+    <div class="card-block">
+        <h4 class="card-title">{{ currentUser.name }}</h4>
+        <p class="card-text">{{ currentUser.email }}</p>
+        <p class="card-text">{{ currentUser.role }}</p>
+    </div>
+    <div class="card-block">
+        <button class="cta" (click)="logOut()">LogOut</button>
+    </div>
+</div>
+<div *ngIf="isAuthenticated && currentUser && !currentUser.isSocial" class="card text-center">
+    <h6 class="card-header">
+        Site Login
+    </h6>
+    <div class="card-block">
+        <h4 class="card-title">{{ currentUser.name }}</h4>
+        <p class="card-text">{{ currentUser.email }}</p>
+        <p class="card-text">{{ currentUser.role }}</p>
+    </div>
+    <div class="card-block">
+        <button class="cta" (click)="logOut()">LogOut</button>
+    </div>  
+</div>
