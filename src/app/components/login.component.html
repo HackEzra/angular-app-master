@@ -1,0 +1,26 @@
+<h1>Login</h1>
+<form [formGroup]="loginForm">
+  <h5 *ngIf="loginFailed" class="error">{{loginError}}</h5>
+  <label>
+    Email:
+    <input type="text" formControlName="email">
+    <div *ngIf="submitted && f.email.errors">
+      <div *ngIf="f.email.errors.required" class="error">Email is required.</div>
+      <div *ngIf="f.email.errors.invalidEmailAddress && !f.email.errors.required" class="error">Invalid email address.</div>
+    </div>
+  </label>
+
+  <label>
+    Password:
+    <input type="password" formControlName="password">
+    <div *ngIf="submitted && f.password.errors">
+      <div *ngIf="f.password.errors.required" class="error">Password is required</div>
+    </div>
+  </label>
+
+  <input type="submit" value="Login" class="cta" (click)="onSubmit()">
+</form>
+
+<hr>OR
+<hr>
+<button class="cta" (click)="googleLogin()">Login with google</button>
