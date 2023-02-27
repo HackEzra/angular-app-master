@@ -1,0 +1,107 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul li {
+    background: #eeeeee;
+    padding: 2em;
+    border-radius: 4px;
+    margin-bottom: 7px;
+    display: grid;
+    grid-template-columns: 60px auto;
+}
+
+ul li p {
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+ul li img {
+    border-radius: 50%;
+    width: 100%;
+}
+
+.bg-transparent {
+    background-color: transparent;
+}
+
+:host {
+    height: 100%;
+}
+
+.photo {
+    object-fit: contain;
+}
+
+.cta {
+    background: #7700FF;
+    border: none;
+    color: white;
+    text-transform: uppercase;
+    border-radius: 4px;
+    padding: 1em;
+    cursor: pointer;
+    font-family: "Montserrat";
+}
+
+.div-head {
+    display: inline-block;
+    width: 100%;
+}
+
+.book-form {
+    display: inline-block;
+    width: 100%;
+}
+
+.div-head div {
+    float: left;
+}
+
+.div-head .add-div {
+    float: right;
+    margin-top: 22px;
+}
+
+label {
+    display: block;
+}
+
+label input,
+label textarea {
+    display: block;
+    width: 50%;
+    /* margin-top: 20px; */
+    padding: 1em;
+}
+
+label .error1 {
+    margin-top: -20px;
+    background: yellow;
+    padding: 0.5em;
+    display: inline-block;
+    font-size: 0.9em;
+    margin-bottom: 20px;
+}
+
+.cta {
+    background: #7700FF;
+    border: none;
+    color: white;
+    text-transform: uppercase;
+    border-radius: 4px;
+    padding: 1em;
+    cursor: pointer;
+    font-family: "Montserrat";
+}
+
+.btn{
+    margin-top: 20px;
+}
+
+.error {
+    color: red;
+    padding-bottom: 3px;
+}

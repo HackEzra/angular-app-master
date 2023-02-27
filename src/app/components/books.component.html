@@ -1,0 +1,45 @@
+<div class="div-head">
+  <div>
+    <h1>Books</h1>
+  </div>
+  <div class="add-div">
+    <button class="cta" (click)="showDialogBox()">Add Book</button>
+  </div>
+</div>
+<ul *ngIf="books">
+  <li *ngFor="let book of books">
+    <img src="https://lh4.googleusercontent.com/-Sqbs1hyvhXA/AAAAAAAAAAI/AAAAAAAAADM/10JVNcs8g6k/s96-c/photo.jpg" />
+    <p>{{book.author}}</p>
+    <div> </div>
+    <div>
+      <p>{{book.title}}</p>
+    </div>
+  </li>
+</ul>
+<app-loader *ngIf="isLoading"></app-loader>
+
+<app-dialog [(visible)]="showDialog">
+  <div class="book-form">
+    <h1>Book Add</h1>
+    <form [formGroup]="bookForm">
+      <h5 *ngIf="bookAddFailed" class="error">{{bookAddError}}</h5>
+      <label>
+        Title:
+        <input type="text" formControlName="title">
+        <div *ngIf="submitted && f.title.errors">
+          <div *ngIf="f.title.errors.required" class="error">Book title is required.</div>
+        </div>
+      </label>
+
+      <label>
+        Author:
+        <input type="text" formControlName="author">
+        <div *ngIf="submitted && f.author.errors">
+          <div *ngIf="f.author.errors.required" class="error">Book author is required.</div>
+        </div>
+      </label>
+
+      <input type="submit" value="Add" class="cta btn" (click)="onSubmit()">
+    </form>
+  </div>
+</app-dialog>
