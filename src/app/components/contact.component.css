@@ -1,0 +1,44 @@
+label {
+    display: block;
+}
+
+label input,
+label textarea {
+    display: block;
+    width: 50%;
+    margin-bottom: 20px;
+    padding: 1em;
+}
+
+label .error {
+    margin-top: -20px;
+    background: yellow;
+    padding: 0.5em;
+    display: inline-block;
+    font-size: 0.9em;
+    margin-bottom: 20px;
+}
+
+.cta {
+    background: #7700FF;
+    border: none;
+    color: white;
+    text-transform: uppercase;
+    border-radius: 4px;
+    padding: 1em;
+    cursor: pointer;
+    font-family: "Montserrat";
+}
+
+.results {
+    margin-top: 50px;
+}
+
+.results strong {
+    display: block;
+}
+
+.results span {
+    margin-bottom: 20px;
+    display: block;
+}
